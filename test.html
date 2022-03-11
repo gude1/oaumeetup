@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport"content="width=device-width,intial-scale=1">
+<title>Gidwon</title>
+<link rel="stylesheet"href="w3.css">
+
+<style>
+
+
+table{
+border-collapse :separate;
+border-spacing :10px;
+}
+td{
+background-color:white;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #slide{
+   height:400px;
+   max-height:500px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+#slide{
+   height:600px;
+   max-height:700px;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #main {margin-left:28.3%;}
+    
+   #slide{
+   height:600px;
+   max-height:700px;
+    }
+} 
+
+
+
+@media only screen and (min-width: 992px) {
+    #main {margin-left:28.3%;}
+    
+    #slide{
+   height:600px;
+   max-height:700px;
+    }
+
+} 
+
+@media only screen and (min-width: 1200px) {
+    #main {margin-left:28.3%;
+    }
+    #sidebar{
+    
+    
+    }
+}
+
+ 
+*{
+font-variant:small-caps;
+}
+</style>
+</head>
+<body class="w3-animate-left w3-light-grey">
+<!--small screen design and medium-->
+<div class="w3-row w3-hide-large ">
+
+
+<div class=" w3-overlay w3-animate-opacity" onclick="cLose()" style="cursor:pointer" id="myOverlay"></div>
+
+
+<!--sidebar on small screens and medium-->
+<div id="sidebar"  class="w3-animate-left w3-sidebar w3-hide w3-card-4 w3-blue w3-bar-block w3-col s7 m7"style="z-index:4;overflow-y:auto;">
+<!--php dynamic code for sidebar gotten from.database here-->
+<span onclick="cLose()"class="w3-bar-item w3-teal">&times</span>
+<img src="nesa.jpg"style="width:100%;">
+<a class="w3-button w3-bar-item w3-blue w3-border-bottom">Settings</a>
+<a class="w3-button w3-blue w3-bar-item w3-border-bottom">About</a>
+<a class="w3-button w3-blue w3-bar-item w3-border-bottom">Change Password</a>
+<a class="w3-button w3-blue w3-bar-item w3-border-bottom">Friends</a>
+</div> 
+
+
+
+<!--page content navbar-->
+<div class="w3-top">
+<div class="w3-card-4 w3-bar w3-blue">
+<!--php dynamic code for navbar gotten from database here-->
+<span class="w3-button w3-bar-item w3-hover-blue"style="width:20%;"onclick="oPen()">&#9776</span>
+<span class="w3-button w3-bar-item w3-hover-blue"style="width:70%;">NESA CONNECT</span>
+<img src="nesalogo.jpg"style="width:10%;"title="logo of our great Nesa">
+</div>
+<div class="w3-card-4 w3-bar w3-blue">
+<div class="w3-button w3-center w3-bar-item w3-hover-blue"style="width:33.3%;">HOME</div>
+<div class="w3-button w3-center w3-bar-item w3-hover-blue"style="width:33.3%;">CHAT</div>
+<div class="w3-button w3-center w3-bar-item w3-hover-blue"style="width:33.3%;">NOTIFICATION</div>
+
+</div>
+</div>
+<br><br><br>
+
+<!--slideshow-->
+<div id="slide" class=" w3-border-top w3-border-blue w3-slideshow w3-card-4 w3-black w3-animate-left w3-margin-top"style="width:100%;">
+
+<!--php dynamic code for slideshow gotten from database here-->
+<img  class ="myslides w3-image w3-animate-left"src="wall3.jpg"style="width:100%;height:100%;">
+
+<img  class ="myslides w3-image w3-animate-left"src="wall4.jpg"style="width:100%;height:100%;display:none;">
+
+<img  class ="myslides w3-image w3-animate-left"src="wall5.jpg"style="width:100%;height:100%;display:none;">
+
+<img  class ="myslides w3-image w3-animate-left"src="wall2.jpg"style="width:100%;height:100%;display:none;">
+
+<img  class ="myslides w3-image w3-animate-left"src="cute.png"style="width:100%;height:100%;display:none;">
+
+<img  class ="myslides w3-image w3-animate-left"src="nesa.jpg"style="width:100%;height:100%;display:none;">
+</div>
+
+
+
+<div class="w3-panel w3-center">
+<span class="w3-button w3-blue w3-hover-blue">MEET YOUR EXCOS</span>
+<table class="w3-responsive w3-animate-zoom"style="margin:auto;width:90%;">
+<!--php dynamic code for table gotten from database here-->
+<tr>
+<td style="width:2%;">
+<div class="w3-card-4 w3-round"style="width:100%;">
+<img class=" w3-image w3-round" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+</div>  
+</td>
+<td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+      
+ <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  <td class="w3-animate-zoom " style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+    <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+  
+</tr>
+</table>
+</div>
+
+
+<div class="w3-panel w3-center">
+<span class="w3-button w3-blue w3-hover-blue">FIND NEW NESA FRIENDS!</span>
+<table class="w3-responsive w3-animate-zoom"style="margin:auto;width:90%;">
+<!--php dynamic code for table gotten from database here-->
+<tr>
+<td style="width:2%;">
+<div class="w3-card-4 w3-round"style="width:100%;">
+<img class=" w3-image w3-round" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+</div>  
+</td>
+<td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+      
+ <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  <td class="w3-animate-zoom " style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+    <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+  
+</tr>
+</table>
+</div>
+
+
+<div class="w3-panel w3-center">
+<span class="w3-button w3-blue w3-hover-blue">NEWS</span>
+<table class="w3-responsive w3-animate-zoom"style="margin:auto;width:90%;">
+  <!--php dynamic code for table gotten from database here-->
+<tr>
+<td style="width:2%;">
+<div class="w3-card-4 w3-round"style="width:100%;">
+<img class=" w3-image w3-round" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+</div>  
+</td>
+<td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+      
+ <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  <td class="w3-animate-zoom " style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+    <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+  
+</tr>
+</table>
+</div>
+
+
+
+
+<div class="w3-panel w3-center">
+<span class="w3-button w3-blue w3-hover-blue">Sports</span>
+<table class="w3-responsive w3-animate-zoom"style="margin:auto;width:90%;">
+<!--php dynamic code for table gotten from database here-->
+<tr>
+<td style="width:2%;">
+<div class="w3-card-4 w3-round"style="width:100%;">
+<img class=" w3-image w3-round" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+</div>  
+</td>
+<td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+      
+ <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  <td class="w3-animate-zoom " style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+    <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+  
+</tr>
+</table>
+</div>
+
+
+<div class="w3-panel w3-center">
+<span class="w3-button w3-blue w3-hover-blue">ENTERTAINMENT</span>
+<table class="w3-responsive w3-animate-zoom"style="margin:auto;width:90%;">
+<!--php dynamic code for table gotten from database here-->
+<tr>
+<td style="width:2%;">
+<div class="w3-card-4 w3-round"style="width:100%;">
+<img class=" w3-image w3-round" src="img1.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+</div>  
+</td>
+<td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+      
+ <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  <td class="w3-animate-zoom " style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+    <td class="w3-animate-zoom"style="width:2%;">
+  <div class="w3-card-4"style="width:100%;">
+<img class="w3-round w3-image" src="nesa.jpg"style="width:80%;display:block;margin:auto;">
+<div class="w3-center w3-padding">
+<p>Emmanuel</p>
+</div>
+</div>
+  </td>
+  
+  
+</tr>
+</table>
+</div>
+
+</div>
+
+
+
+<div class="footer w3-bottom w3-blue w3-center">
+<p>2018Â©copyright Owolabi Gideon</p>
+</div>
+
+
+
+
+
+<script>
+var slideShow = 0; 
+
+cArousel();
+
+function cArousel(){ 
+slideShow++;
+
+var i,x;
+ x = document.getElementsByClassName("myslides");
+
+if(slideShow > x.length){
+
+slideShow = 1;
+
+}
+for(i=0;i < x.length; i++){
+
+x[i].style.display="none";
+
+}
+x[slideShow -1].style.display="block";
+
+setTimeout(cArousel,4000);
+
+}
+
+
+
+
+function oPen(){ 
+var x = document.getElementById("sidebar");
+x.className = x.className.replace("w3-hide","");
+
+document.getElementById("myOverlay").style.display="block";
+
+}
+
+function cLose(){
+
+var x = document.getElementById("sidebar");
+x.className +=" w3-hide";
+
+document.getElementById("myOverlay").style.display="none";
+
+}
+
+</script>
+</body>
+</html>
